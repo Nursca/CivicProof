@@ -1,0 +1,11 @@
+{
+  "network": "testnet",
+  "deployed_at": "2026-10-22T19:37:44.198866073+00:00",
+  "contracts": {
+    "civic-proof": {
+      "contract_id": "ST36HDR695W2N2253W1APXC6QZK4RH0A4FFWJ70QJ.civic-proof",
+      "tx_id": "0x6cc23d623730bc5c9c39a8faaa2ab507706020479728410e6b5ce316bb68abf5",
+      "block_height": 0
+    }
+  }
+}

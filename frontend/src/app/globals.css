@@ -4,11 +4,18 @@
 @tailwind utilities;
 
 :root {
-  --background: #131416 !important;
-  --foreground: #f9fafb;
+  --background: #FBF9F4;
+  --foreground: #1B1A17;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  background-image: radial-gradient(#E9E4D7 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+::selection {
+  background: #FFD23F;
+  color: #1B1A17;
 }

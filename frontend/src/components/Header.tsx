@@ -1,47 +1,22 @@
 import React from 'react'
+import Link from 'next/link'
 import { WalletConnect } from './WalletConnect'
 import NetworkBadge from './NetworkBadge'
-import Image from 'next/image'
-import logo from '@/public/logo.png'
-import github from '@/public/icon.png'
 
 function Header() {
   return (
-    <header className="
-      mt-[20px] md:mt-[50px] 
-      mx-auto 
-      px-4 md:px-6 
-      py-4 
-      bg-[#1F1E1F] 
-      border-[#1F1E1F] 
-      flex flex-col md:flex-row 
-      items-center justify-between 
-      w-[95%] max-w-[788px] 
-      rounded-[24px] md:rounded-[32px]
-      gap-4 md:gap-0
-    ">
-      <div className="flex items-center gap-1">
-        <div className="flex items-center gap-3">
-          <Image src={logo} alt="logo" width={32} height={32} />
-          <span className="text-[#FFFFFF] text-[20px] md:text-[24.77px] font-medium font-instrument">
-            SfdStacks
+    <header className="sticky top-0 z-40 border-b border-[#E4DFD3] bg-[#FBF9F4]/90 backdrop-blur">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
+        <Link href="/" className="flex items-center gap-2.5">
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#1B1A17] text-[#FFD23F]">
+            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z" />
+              <path d="m8.5 12 2.5 2.5 4.5-5" />
+            </svg>
           </span>
-        </div>  
-        <NetworkBadge />
-      </div>
-
-      <div className='flex items-center space-x-4 md:space-x-6'>
-      <a 
-            href="https://github.com/scaffold-stack/scaffold-stack" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="no-underline" 
-          >
-        <div className='hidden sm:flex space-x-2 items-center justify-center cursor-pointer hover:opacity-80 transition-opacity'>
-          <Image src={github} alt="github" width={20} height={20} />
-          <h1 className='text-[14px] md:text-[16px] text-[#8F8D8E] font-instrument'>Github</h1>
-        </div>
-        </a>
+          <span className="font-instrument text-[20px] font-semibold tracking-tight text-[#1B1A17]">CivicProof</span>
+          <NetworkBadge />
+        </Link>
         <WalletConnect />
       </div>
     </header>

@@ -96,7 +96,7 @@ export function WalletConnect() {
       <button
         onClick={handleConnect}
         disabled={connecting}
-        className='bg-[#434242] w-[135px] h-[40px] rounded-[40px] border-[1px] border-[#1F1E1F] text-[12px] text-[#F4F3EF] font-mono leading-[100%]'
+        className='h-[38px] rounded-full bg-[#1B1A17] px-4 text-[13px] font-semibold text-[#FFD23F] transition hover:bg-black disabled:opacity-60'
       >
         {connecting ? 'Connecting...' : 'Connect Wallet'}
       </button>
@@ -107,12 +107,13 @@ export function WalletConnect() {
   const short = `${address.slice(0, 6)}…${address.slice(-4)}`;
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-      <div className='bg-[#434242] w-[135px] h-[40px] rounded-[40px] border-[1px] border-[#1F1E1F] text-[12px] text-[#F4F3EF] font-mono leading-[100%] flex items-center justify-center'>
+      <div className='flex h-[38px] items-center gap-2 rounded-full border border-[#E4DFD3] bg-white px-3.5 font-mono text-[12px] text-[#1B1A17]'>
+        <span className='h-2 w-2 rounded-full bg-[#2E9E57]' />
         {short}
       </div>
       <button 
         onClick={handleDisconnect}
-        style={{ padding: '6px 12px', color: '#9ca3af', cursor: 'pointer', background: 'transparent', border: 'none' }}
+        className='rounded-full px-2 py-1.5 text-[12px] text-[#6B685F] hover:bg-[#EFEBE0]'
       >
         Disconnect
       </button>

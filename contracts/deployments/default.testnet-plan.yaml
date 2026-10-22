@@ -1,0 +1,17 @@
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: https://api.testnet.hiro.so
+bitcoin-node: http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332
+plan:
+  batches:
+  - id: 0
+    transactions:
+    - transaction-type: contract-publish
+      contract-name: civic-proof
+      expected-sender: ST36HDR695W2N2253W1APXC6QZK4RH0A4FFWJ70QJ
+      cost: 163785
+      path: contracts/civic-proof.clar
+      anchor-block-only: true
+      clarity-version: 6
+    epoch: '4.0'
